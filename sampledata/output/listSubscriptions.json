@@ -1,0 +1,11 @@
+{
+    "Subscriptions": [
+        {
+            "Owner": "814129119746", 
+            "Endpoint": "akilkudil@gmail.com", 
+            "Protocol": "email", 
+            "TopicArn": "arn:aws:sns:us-east-1:814129119746:my-topic", 
+            "SubscriptionArn": "arn:aws:sns:us-east-1:814129119746:my-topic:18f98a75-20a6-42af-aada-8cefcb2bb525"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "Topics": [
+        {
+            "TopicArn": "arn:aws:sns:us-east-1:814129119746:my-topic"
+        }
+    ]
+}

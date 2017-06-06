@@ -1,0 +1,55 @@
+1. Create Topic
+aws sns create-topic --name my-topic >> C:/SPB_Data/AWS-Training-SNS/sampledata/output/createTopic.json
+
+
+
+2.Subscribe to a topic
+
+aws sns subscribe --topic-arn "arn:aws:sns:us-east-1:814129119746:my-topic" --protocol email --notification-endpoint akilkudil@gmail.com
+
+After creating a subscription, it needs to be confirmed by notification-endpoint owner (in this case akilkudil@gmail.com)
+
+Once confirmed, the subscription will have a subscription id (eg. arn:aws:sns:us-east-1:814129119746:my-topic:18f98a75-20a6-42af-aada-8cefcb2bb525)
+
+
+3. Confirm subscription
+
+ aws sns confirm-subscription--topic-arn "arn:aws:sns:us-east-1:814129119746:my-topic"  --token <value>
+
+4 .Unsubscribe a topic subscription
+
+aws sns unsubscribe --subscription-arn "arn:aws:sns:us-east-1:814129119746:my-topic:18f98a75-20a6-42af-aada-8cefcb2bb525"
+
+5. Delete topic
+
+aws sns delete-topic  --topic-arn "arn:aws:sns:us-east-1:814129119746:my-topic"
+
+6.List subscriptions
+
+aws sns list-subscriptions
+
+--starting-token (for pagination)
+--max-items (for pagination)
+if total no. of items is greater than max-items then response returns only number defined by max-items. in addition it returns nextToken (next request --starting-token nextToken )
+
+7. List subscriptions by Topic
+
+aws sns list-subscriptions-by-topic
+--starting-token (for pagination)
+--max-items (for pagination)
+
+8. List Topics
+
+aws sns list-topics
+--starting-token (for pagination)
+--max-items (for pagination)
+
+9. publish message into a topic
+
+aws sns publish --topic-arn "arn:aws:sns:us-east-1:814129119746:my-topic" --message file://C:/SPB_Data/AWS-Training-SNS/sampledata/input/message.txt 
+
+outputs a messageid.
+
+10. 
+
+
